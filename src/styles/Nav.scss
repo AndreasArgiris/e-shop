@@ -1,0 +1,180 @@
+@import url(./variables.scss);
+@import url(./mixins.scss);
+
+.basket-icon {
+  position: sticky;
+  top: 2%;
+  left: 93%;
+  background-color: $white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  z-index: 10;
+  cursor: pointer;
+  @include flex-center;
+  & img {
+    width: 40px;
+    height: 40px;
+  }
+  & span {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    bottom: -8px;
+    right: -8px;
+    font-weight: 800;
+    @include flex-center;
+    z-index: 5;
+    border-radius: 50%;
+    color: $white;
+    background-color: $green;
+  }
+}
+////MEDIA QUERIES///
+@media screen and (max-width: 1650px) {
+}
+@media screen and (min-width: 1440px) and (max-width: 1649px) {
+}
+@media screen and (min-width: 1250px) and (max-width: 1439px) {
+}
+@media screen and (min-width: 1024px) and (max-width: 1249px) {
+  .basket-icon {
+    top: 2%;
+    left: 90%;
+    width: 60px;
+    height: 60px;
+    & img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .basket-icon {
+    top: 2%;
+    left: 90%;
+    width: 50px;
+    height: 50px;
+    & img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media all and (min-width: 610px) and (max-width: 767px) {
+  .basket-icon {
+    top: 2%;
+    left: 90%;
+    width: 50px;
+    height: 50px;
+    & img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media all and (min-width: 480px) and (max-width: 609px) {
+  .basket-icon {
+    top: 2%;
+    left: 87%;
+    width: 45px;
+    height: 45px;
+    & img {
+      width: 25px;
+      height: 25px;
+    }
+    & span {
+      position: absolute;
+      width: 1.2rem;
+      height: 1.2rem;
+      font-size: 0.8rem;
+      bottom: -6px;
+      right: -6px;
+      font-weight: 800;
+      @include flex-center;
+      z-index: 5;
+      border-radius: 50%;
+      color: $white;
+      background-color: $green;
+    }
+  }
+}
+@media all and (min-width: 360px) and (max-width: 479px) {
+  .basket-icon {
+    top: 2%;
+    left: 83%;
+    width: 40px;
+    height: 40px;
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+    & span {
+      position: absolute;
+      width: 1.1rem;
+      height: 1.1rem;
+      font-size: 0.7rem;
+      bottom: -5px;
+      right: -5px;
+      font-weight: 800;
+      @include flex-center;
+      z-index: 5;
+      border-radius: 50%;
+      color: $white;
+      background-color: $green;
+    }
+  }
+}
+@media all and (min-width: 280px) and (max-width: 359px) {
+  .basket-icon {
+    top: 1%;
+    left: 83%;
+    width: 40px;
+    height: 40px;
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+    & span {
+      position: absolute;
+      width: 1.1rem;
+      height: 1.1rem;
+      font-size: 0.7rem;
+      bottom: -5px;
+      right: -5px;
+      font-weight: 800;
+      @include flex-center;
+      z-index: 5;
+      border-radius: 50%;
+      color: $white;
+      background-color: $green;
+    }
+  }
+}
+@media all and (max-width: 280px) {
+  .basket-icon {
+    top: 1%;
+    left: 83%;
+    width: 40px;
+    height: 40px;
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+    & span {
+      position: absolute;
+      width: 1.1rem;
+      height: 1.1rem;
+      font-size: 0.7rem;
+      bottom: -5px;
+      right: -5px;
+      font-weight: 800;
+      @include flex-center;
+      z-index: 5;
+      border-radius: 50%;
+      color: $white;
+      background-color: $green;
+    }
+  }
+}
