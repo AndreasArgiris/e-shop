@@ -15,9 +15,7 @@ const Nav = ({ openBasket, setOpenBasket }) => {
   ///we extract from context
   const [{ basket }] = useStateValue();
   const BasketHandler = () => {
-    if (isMobile) {
-      console.log("On mouse enter event is not available in mobile.");
-    } else setOpenBasket(!openBasket);
+    setOpenBasket(!openBasket);
   };
   return (
     <motion.div
@@ -27,7 +25,7 @@ const Nav = ({ openBasket, setOpenBasket }) => {
       animate="animate"
       exit="exit"
     >
-      <img onMouseEnter={BasketHandler} src={basketIcon} alt="basket-icon" />
+      <img onClick={BasketHandler} src={basketIcon} alt="basket-icon" />
       <span>{getItemsTotal(basket)}</span>
     </motion.div>
   );

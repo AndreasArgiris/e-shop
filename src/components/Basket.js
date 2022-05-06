@@ -22,11 +22,7 @@ const Basket = ({ openBasket, setOpenBasket }) => {
   const history = useHistory();
 
   const BasketHandler = () => {
-    if (isMobile) {
-      console.log("On mouse enter event is not available in mobile.");
-    } else {
-      setOpenBasket(!openBasket);
-    }
+    setOpenBasket(!openBasket);
   };
 
   return (
@@ -38,9 +34,8 @@ const Basket = ({ openBasket, setOpenBasket }) => {
           initial="initial"
           animate="animate"
           exit="exit"
-          onMouseLeave={BasketHandler}
         >
-          <span onClick={() => setOpenBasket(!openBasket)}>
+          <span onClick={BasketHandler}>
             <IoClose className="basket-close" />
           </span>
           <div className="basket-container">
