@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import CheckOut from "./pages/CheckOut";
 import ProductDetails from "./pages/ProductDetails";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const location = useLocation();
@@ -33,6 +34,9 @@ function App() {
             openBasket={openBasket}
             setOpenBasket={setOpenBasket}
           />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </AnimatePresence>

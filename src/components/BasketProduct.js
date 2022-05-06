@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { useStateValue } from "../context/StateProvider.js";
 
 const BasketProduct = ({ id, name, price, quantity, img }) => {
+  ///we extract from context
   const [, dispatch] = useStateValue();
 
   return (

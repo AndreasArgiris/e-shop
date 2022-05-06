@@ -1,0 +1,94 @@
+@import url("./variables.scss");
+//subtotal
+.subtotal {
+  margin: 0.3rem 0;
+  & h2 {
+    font-size: 2rem;
+  }
+}
+//subtotal
+.subtotal-checkout {
+  margin: 0.3rem 0 0.6rem 0;
+  & h2 {
+    font-family: "VoyageBold";
+    color: $black;
+    font-size: 4.5rem;
+  }
+}
+
+////MEDIA QUERIES///
+@media screen and (max-width: 1650px) {
+}
+@media screen and (min-width: 1440px) and (max-width: 1649px) {
+}
+@media screen and (min-width: 1250px) and (max-width: 1439px) {
+}
+@media screen and (min-width: 1024px) and (max-width: 1249px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  //subtotal
+  .subtotal-checkout {
+    & h2 {
+      font-size: 3.5rem;
+    }
+  }
+}
+@media all and (min-width: 610px) and (max-width: 767px) {
+  .subtotal-checkout {
+    & h2 {
+      font-size: 3.5rem;
+    }
+  }
+}
+@media all and (min-width: 480px) and (max-width: 609px) {
+  //subtotal
+  .subtotal {
+    & h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .subtotal-checkout {
+    & h2 {
+      font-size: 3.5rem;
+    }
+  }
+}
+@media all and (min-width: 360px) and (max-width: 479px) {
+  //subtotal
+  .subtotal {
+    & h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .subtotal-checkout {
+    & h2 {
+      font-size: 3.5rem;
+    }
+  }
+}
+@media all and (min-width: 280px) and (max-width: 359px) {
+  //subtotal
+  .subtotal {
+    & h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .subtotal-checkout {
+    & h2 {
+      font-size: 2.5rem;
+    }
+  }
+}
+@media all and (max-width: 280px) {
+  //subtotal
+  .subtotal {
+    & h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .subtotal-checkout {
+    & h2 {
+      font-size: 2.5rem;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 export const initialState = {
   basket: [],
   user: null,
@@ -5,49 +7,51 @@ export const initialState = {
   popup: false,
 };
 
-// Selector
+// total amount and total items
 export const getBasketTotal = (basket) =>
   basket?.reduce((amount, item) => (item.price + amount) * item.quantity, 0);
 export const getItemsTotal = (basket) =>
   basket?.reduce((amount, item) => item.quantity + amount, 0);
-
-//   if (action.type === "GET_TOTAL") {
-//     let { totalItem, totalAmount } = state.item.reduce(
-//       (accum, curVal) => {
-//         let { price, quantity } = curVal;
-
-//         let updatedTotalAmount = price * quantity;
-//         accum.totalAmount += updatedTotalAmount;
-
-//         accum.totalItem += quantity;
-//         return accum;
-//       },
-//       {
-//         totalItem: 0,
-//         totalAmount: 0,
-//       }
-//     );
-//     return { ...state, totalItem, totalAmount };
-//   }
-//   return state;
-// };
-
+//our reducer
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_BASKET":
+      //we see if product that dispatched id=== with a basket's array product id
       const productInCart = state.basket.find((p) => p.id === action.item.id);
+      //if the product its not in basket array
       if (!productInCart) {
+        //toast
+        toast.success(`You added 1  ${action.item.name} to basket.`, {
+          position: "top-right",
+          autoClose: 2000,
+          //toast
+        });
         return {
           ...state,
           //spread all state.basket(give me all data you have,and add action.item(from dispatch method))
           basket: [...state.basket, action.item],
           popup: action.popup,
         };
-      } else {
+      }
+      //if it is
+      //map all the basket array
+      // and if an element's id === product that dispatched id
+      // return all the id equaled item and increse its quantiy
+      // else return items that does not pass the if criteria
+      //after updatedCart logic above...
+      //return the whole state spreaded and set basket to updated basket
+      else {
+        //toast
+        toast.success(`You added + 1 ${action.item.name}.`, {
+          position: "top-right",
+          autoClose: 2000,
+          //toast
+        });
         const updatedCart = state.basket.map((curElem) => {
           if (curElem.id === action.item.id) {
             return { ...curElem, quantity: curElem.quantity + 1 };
           }
+
           return curElem;
         });
 

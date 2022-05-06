@@ -13,21 +13,33 @@ import { motion } from "framer-motion/dist/framer-motion";
 import BasketProduct from "./BasketProduct.js";
 //currency
 import Subtotal from "./SubTotal.js";
+//animations
+import { BasketAnimation } from "../animations/BasketAnimation.js";
 
 const Basket = ({ openBasket, setOpenBasket }) => {
+  ///we extract from context
   const [{ basket }] = useStateValue();
   const history = useHistory();
 
   const BasketHandler = () => {
     if (isMobile) {
       console.log("On mouse enter event is not available in mobile.");
-    } else setOpenBasket(!openBasket);
+    } else {
+      setOpenBasket(!openBasket);
+    }
   };
 
   return (
     <>
       {!openBasket ? (
-        <motion.div className="basket" onMouseLeave={BasketHandler}>
+        <motion.div
+          className="basket"
+          variants={BasketAnimation}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          onMouseLeave={BasketHandler}
+        >
           <span onClick={() => setOpenBasket(!openBasket)}>
             <IoClose className="basket-close" />
           </span>
@@ -66,6 +78,7 @@ const Basket = ({ openBasket, setOpenBasket }) => {
                 className="basket-container_button"
                 onClick={() => {
                   history.push("/checkout");
+                  setOpenBasket(!openBasket);
                 }}
               >
                 CHECKOUT

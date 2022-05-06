@@ -1,0 +1,57 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.error-page {
+  width: 100vw;
+  height: 100vh;
+  @include flex-column-center;
+  background-color: $grey;
+
+  & h1 {
+    font-size: $fs-biggest;
+    font-weight: $fw-heavy;
+    font-family: "VoyageBold";
+    font-style: bold;
+    color: $green;
+  }
+  & h2 {
+    font-size: $fs-medium;
+    font-weight: $fw-heavy;
+    text-transform: uppercase;
+    color: $green;
+  }
+  & span {
+    @include flex-column-center;
+    & h3 {
+      font-size: $fs-small;
+      text-transform: uppercase;
+      color: $white;
+    }
+    & .back-to {
+      font-size: $fs-big;
+      color: $white;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .error-page {
+    & h1 {
+      font-size: $fs-bigger;
+    }
+    & h2 {
+      font-size: $fs-small;
+    }
+    & span {
+      & h3 {
+        font-size: $fs-small;
+      }
+      & .back-to {
+        font-size: $fs-medium;
+      }
+    }
+  }
+}

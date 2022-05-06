@@ -6,6 +6,7 @@ import { useStateValue } from "../context/StateProvider";
 import { getBasketTotal } from "../context/reducer";
 
 function Subtotal() {
+  ///we extract from context
   const [{ basket }] = useStateValue();
 
   return (

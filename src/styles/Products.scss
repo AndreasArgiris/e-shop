@@ -3,7 +3,8 @@
 
 .shop-page {
   width: 100%;
-  height: 200vh;
+  height: 300vh;
+  position: relative;
   background-color: $grey;
 }
 .products-section {
@@ -93,6 +94,15 @@
   left: 0;
   bottom: -10%;
   z-index: 3;
+}
+.products-wrapper {
+  width: 100%;
+  height: 120%;
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  background: $green;
+  z-index: 10;
 }
 
 ////MEDIA QUERIES///

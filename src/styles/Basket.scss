@@ -47,11 +47,16 @@
   border-radius: 4px;
   font-weight: 700;
   cursor: pointer;
+  transform: translateY(0px);
   transition: all 0.4s ease-in-out;
   &:hover {
     color: $black;
     background-color: $white;
     border: 2px solid $black;
+  }
+  &:active,
+  &:focus {
+    transform: translateY(2px);
   }
 }
 
@@ -102,10 +107,15 @@
       background-color: $black;
       border-radius: 50%;
       cursor: pointer;
+      transform: translateY(0);
       transition: all 0.4s ease-in-out;
       &:hover {
         color: $black;
         background-color: $green;
+      }
+      &:active,
+      &:focus {
+        transform: translateY(2px);
       }
     }
   }
@@ -137,13 +147,7 @@
     text-transform: uppercase;
   }
 }
-//subtotal
-.subtotal {
-  margin: 0.3rem 0;
-  & h2 {
-    font-size: 2rem;
-  }
-}
+
 ////MEDIA QUERIES///
 @media screen and (max-width: 1650px) {
 }
@@ -302,12 +306,6 @@
       font-size: 1.2rem;
     }
   }
-  //subtotal
-  .subtotal {
-    & h2 {
-      font-size: 1.5rem;
-    }
-  }
   //checkout button
   .basket-container_button {
     padding: 0.3rem 1.5rem;
@@ -360,12 +358,6 @@
     & h3,
     & h4 {
       font-size: 1.2rem;
-    }
-  }
-  //subtotal
-  .subtotal {
-    & h2 {
-      font-size: 1.5rem;
     }
   }
   //checkout button
@@ -424,12 +416,6 @@
       font-size: 1.2rem;
     }
   }
-  //subtotal
-  .subtotal {
-    & h2 {
-      font-size: 1.5rem;
-    }
-  }
   //checkout button
   .basket-container_button {
     padding: 0.3rem 1.5rem;
@@ -481,12 +467,6 @@
     & h3,
     & h4 {
       font-size: 1.2rem;
-    }
-  }
-  //subtotal
-  .subtotal {
-    & h2 {
-      font-size: 1.5rem;
     }
   }
   //checkout button
