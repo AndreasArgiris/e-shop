@@ -446,7 +446,7 @@
     }
   }
 }
-@media only screen and (max-width: 376px) and (max-height: 668px) {
+@media only screen and (max-width: 376px) and (max-height: 668px) and(-webkit-min-device-pixel-ratio:0) {
   .home-logo {
     @include flex-center;
     & h2 {
@@ -469,7 +469,7 @@
     }
     &_images .center-model {
       position: relative;
-      width: 100%;
+      width: 200px;
       height: 300px;
     }
     & h1 {
