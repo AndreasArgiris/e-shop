@@ -60,7 +60,6 @@ const Contact = () => {
         className="circle"
         variants={ContactSvgAnimation}
       ></motion.div>
-      <div className="circle-green"></div>
     </motion.section>
   );
 };

@@ -1,0 +1,149 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.order-confirm {
+  width: 100vw;
+  height: 100vh;
+  @include flex-column-center;
+  background-color: $grey;
+
+  & h1 {
+    font-size: $fs-big;
+    font-weight: $fw-heavy;
+    font-family: "VoyageBold";
+    font-style: bold;
+    color: $green;
+  }
+  & h2 {
+    font-size: $fs-small;
+    margin-top: 1rem;
+    font-weight: $fw-heavy;
+    text-transform: uppercase;
+    color: $white;
+  }
+  & span {
+    @include flex-column-center;
+    margin-top: 2rem;
+    & h3 {
+      font-size: $fs-small;
+      text-transform: uppercase;
+      color: $white;
+    }
+    & .back-to {
+      font-size: $fs-big;
+      color: $white;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+@media all and (max-width: 767px) {
+  .order-confirm {
+    & h1 {
+      font-size: $fs-medium;
+    }
+    & h2 {
+      font-size: $fs-small;
+    }
+    & span {
+      & h3 {
+        font-size: $fs-small;
+      }
+      & .back-to {
+        font-size: $fs-medium;
+      }
+    }
+  }
+}
+@media all and (min-width: 480px) and (max-width: 609px) {
+  .order-confirm {
+    & h1 {
+      font-size: 1.5rem;
+    }
+    & h2 {
+      font-size: $fs-small;
+    }
+    & span {
+      & h3 {
+        font-size: $fs-small;
+      }
+      & .back-to {
+        font-size: $fs-small;
+      }
+    }
+  }
+}
+@media all and (min-width: 480px) and (max-width: 609px) {
+  .order-confirm {
+    & h1 {
+      font-size: 1.5rem;
+    }
+    & h2 {
+      font-size: 0.8rem;
+    }
+    & span {
+      & h3 {
+        font-size: 0.8rem;
+      }
+      & .back-to {
+        font-size: $fs-medium;
+      }
+    }
+  }
+}
+@media all and (min-width: 360px) and (max-width: 479px) {
+  .order-confirm {
+    & h1 {
+      font-size: 1.5rem;
+    }
+    & h2 {
+      font-size: 0.8rem;
+    }
+    & span {
+      & h3 {
+        font-size: 0.8rem;
+      }
+      & .back-to {
+        font-size: $fs-medium;
+      }
+    }
+  }
+}
+@media all and (min-width: 280px) and (max-width: 359px) {
+  .order-confirm {
+    & h1 {
+      font-size: 1rem;
+    }
+    & h2 {
+      font-size: 0.6rem;
+    }
+    & span {
+      & h3 {
+        font-size: 0.6rem;
+      }
+      & .back-to {
+        font-size: $fs-normal;
+      }
+    }
+  }
+}
+@media all and (max-width: 280px) {
+  .order-confirm {
+    & h1 {
+      font-size: 1rem;
+    }
+    & h2 {
+      font-size: 0.6rem;
+    }
+    & span {
+      & h3 {
+        font-size: 0.6rem;
+      }
+      & .back-to {
+        font-size: $fs-normal;
+      }
+    }
+  }
+}

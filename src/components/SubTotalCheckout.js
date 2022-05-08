@@ -1,4 +1,5 @@
 import React from "react";
+//currency library
 import CurrencyFormat from "react-currency-format";
 //context
 import { useStateValue } from "../context/StateProvider";

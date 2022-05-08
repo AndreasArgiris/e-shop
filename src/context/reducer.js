@@ -2,9 +2,7 @@ import { toast } from "react-toastify";
 
 export const initialState = {
   basket: [],
-  user: null,
-  userInfo: null,
-  popup: false,
+  order: false,
 };
 
 // total amount and total items
@@ -86,22 +84,10 @@ const reducer = (state, action) => {
         //we set basket into our new modified variable
         basket: newBasket,
       };
-
-    case "SET_USER":
+    case "ORDER":
       return {
         ...state,
-        user: action.user,
-      };
-
-    case "SET_USER_INFO":
-      return {
-        ...state,
-        userInfo: action.userInfo,
-      };
-    case "POP_UP":
-      return {
-        ...state,
-        popup: action.popup,
+        order: action.order,
       };
 
     default:

@@ -26,27 +26,10 @@ const Home = () => {
 
   return (
     <section className="home">
-      <motion.div
-        className="home-wrapper"
-        variants={WrapperAnimation}
-        exit="exit"
-      ></motion.div>
-      <motion.div
-        className="home-wrapper_2"
-        variants={WrapperAnimation2}
-        exit="exit"
-      ></motion.div>
-      <motion.div
-        className="home-container"
-        variants={HomeAnimation}
-        exit="exit"
-      >
-        <motion.div
-          className="home-logo"
-          variants={TextAnimation2}
-          initial="initial"
-          animate="animate"
-        >
+      <motion.div className="home-wrapper" variants={WrapperAnimation} exit="exit"></motion.div>
+      <motion.div className="home-wrapper_2" variants={WrapperAnimation2} exit="exit"></motion.div>
+      <motion.div className="home-container" variants={HomeAnimation} exit="exit">
+        <motion.div className="home-logo" variants={TextAnimation2} initial="initial" animate="animate">
           <h2>SEECE</h2>
         </motion.div>
         <div className="home-content">
@@ -79,36 +62,16 @@ const Home = () => {
               animate="animate"
             />
           </div>
-          <motion.h1
-            className="home-header"
-            variants={TextAnimation}
-            initial="initial"
-            animate="animate"
-          >
+          <motion.h1 className="home-header" variants={TextAnimation} initial="initial" animate="animate">
             Seece
           </motion.h1>
-          <motion.h2
-            className="home-subheader"
-            variants={TextAnimation3}
-            initial="initial"
-            animate="animate"
-          >
+          <motion.h2 className="home-subheader" variants={TextAnimation3} initial="initial" animate="animate">
             ‘‘eyes on lead’’
           </motion.h2>
         </div>
-        <motion.div
-          className="home-button"
-          variants={TextAnimation2}
-          initial="initial"
-          animate="animate"
-        >
+        <motion.div className="home-button" variants={TextAnimation2} initial="initial" animate="animate">
           <h2>EXPLORE</h2>
-          <div
-            className="home-button_container"
-            onClick={() => {
-              history.push("/shop");
-            }}
-          >
+          <div className="home-button_container" onClick={() => { history.push("/shop"); }}>
             <span className="home-button_outer"></span>
             <motion.img
               src={click}

@@ -1,8 +1,6 @@
 import React from "react";
 //icon
 import basketIcon from "../images/icons/basket-icon.svg";
-//detect device
-import { isMobile } from "react-device-detect";
 //context
 import { useStateValue } from "../context/StateProvider.js";
 import { getItemsTotal } from "../context/reducer";

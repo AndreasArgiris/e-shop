@@ -33,20 +33,8 @@ const CheckOut = () => {
 
   return (
     <section className="checkout">
-      <motion.div
-        className="checkout-container"
-        variants={CheckoutContainerAnimation}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-      >
-        <motion.div
-          className="checkout-container_content"
-          variants={CheckoutItemAnimation}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-        >
+      <motion.div className="checkout-container" variants={CheckoutContainerAnimation} initial="initial" animate="animate" exit="exit">
+        <motion.div className="checkout-container_content" variants={CheckoutItemAnimation} initial="initial" animate="animate" exit>
           <h1>checkout</h1>
           <div className="checkout-container_items">
             {basket.map((item) => {
@@ -70,13 +58,7 @@ const CheckOut = () => {
             })}
           </div>
         </motion.div>
-        <motion.div
-          className="checkout-container_price"
-          variants={CheckoutItemAnimation}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-        >
+        <motion.div className="checkout-container_pricevariants={CheckoutItemAnimationinitial="initialanimate="animate"exit="exit">
           <h3>total</h3>
           <h4>
             {getItemsTotal(basket)}
@@ -86,16 +68,7 @@ const CheckOut = () => {
           <Paypal />
         </motion.div>
       </motion.div>
-      <motion.span
-        className="back-button"
-        onClick={() => {
-          history.push("/shop");
-        }}
-        variants={CheckoutItemAnimation2}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-      >
+      <motion.span className="back-button" onClick={() => {history.push("/shop")}} variants={CheckoutItemAnimation2}initial="initial"animate="animate"exit="exit">
         <IoArrowBack className="back-color" />
       </motion.span>
     </section>

@@ -1,17 +1,44 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 //context
 import { useStateValue } from "../../context/StateProvider";
 //reducer
 import { getBasketTotal } from "../../context/reducer";
+import { useHistory } from "react-router-dom";
 
 function Paypal() {
+  const [paid, setPaid] = useState(false);
+  const [error, setError] = useState(null);
+
   const paypal = useRef();
+  const history = useHistory();
   //we extract basket from context
-  const [{ basket }] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
+
+  const handleApprove = (orderId) => {
+    //if response sucess
+    setPaid(true);
+    dispatch({
+      type: "ORDER",
+      order: true,
+    });
+  };
+
+  if (paid) {
+    history.push("/order");
+  }
+  if (error) {
+    alert(error);
+  }
 
   useEffect(() => {
     window.paypal
       .Buttons({
+        style: {
+          shape: "pill",
+          color: "silver",
+          layout: "horizontal",
+          height: 48,
+        },
         createOrder: (data, actions, err) => {
           return actions.order.create({
             intent: "CAPTURE",
@@ -28,9 +55,10 @@ function Paypal() {
         },
         onApprove: async (data, actions) => {
           const order = await actions.order.capture();
-          console.log(order);
+          handleApprove(data.orderId);
         },
         onError: (err) => {
+          setError(err);
           console.log(err);
         },
       })

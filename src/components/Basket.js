@@ -6,8 +6,7 @@ import { useHistory } from "react-router-dom";
 //context
 import { useStateValue } from "../context/StateProvider.js";
 import { getItemsTotal } from "../context/reducer";
-//device detect
-import { isMobile } from "react-device-detect";
+//framer-motion
 import { motion } from "framer-motion/dist/framer-motion";
 //component
 import BasketProduct from "./BasketProduct.js";
