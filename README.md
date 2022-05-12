@@ -1,5 +1,6 @@
-A complete modern fashion design e-shop .
-https://seece.vercel.app/ 
+<p style='text-align:"center'>A complete modern fashion design e-shop .
+<a>https://seece.vercel.app/ <a/>
+<p/>
 <hr/>
 
 I designed this page based on fashion brands fonts colors and designs.
